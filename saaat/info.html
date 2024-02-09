@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website</title>
+  <style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+    }
+    #snow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 10000;
+    }
+</style>
+</head>
+<body>
+
+<div id="snow"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const snowContainer = document.getElementById("snow");
+
+    function createSnowflake() {
+        const snowflake = document.createElement("div");
+        snowflake.className = "snowflake";
+        snowflake.style.left = Math.random() * window.innerWidth + "px";
+        snowflake.style.animationDuration = Math.random() * 7 + 4 + "s"; // Hızı buradan ayarlayabilirsiniz
+        snowflake.style.opacity = Math.random();
+        snowflake.innerHTML = "❄";
+        snowContainer.appendChild(snowflake);
+
+        setTimeout(function () {
+            snowflake.style.transform = "translateY(" + (window.innerHeight - 20) + "px)";
+        }, 7000);
+    }
+
+    setInterval(function () {
+        createSnowflake();
+    }, 400); // Kar taneciklerinin sıklığını buradan ayarlayabilirsiniz
+});
+</script>
+
+
+<style>
+
+    
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+
+#logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  transform: scale(1.5); /*büyültme*/
+  
+}
+
+#logo img {
+  width: 50px;
+  height: auto;
+}
+
+
+
+
+</style>
+
+
+<div id="logo">
+  <img src="fener1.png" alt="Fenerbahçe Logo">
+</div>
+
+
+<style>
+.snowflake {
+    position: fixed;
+    font-size: 16px;
+    color: #fff; /* Renk ayarı burada */
+    user-select: none;
+    pointer-events: none;
+    z-index: 10001;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+</style>
+
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #000000; /* Set your desired background color */
+    }
+
+    .tooltip-container {
+      height: 70px;
+      width: 110px;
+      border-radius: 5px;
+      background-color: #fff;
+      background-image: linear-gradient(
+        to left bottom,
+        #f2f5f8,
+        #ecf1f2,
+        #e7eceb,
+        #e3e7e4,
+        #e1e2de
+      );
+      border: 1px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.151);
+      position: fixed;
+      transition: transform 0.3s ease;
+    }
+
+    .tooltip-container::before {
+      position: absolute;
+      content: "";
+      top: -50%;
+      clip-path: polygon(50% 0, 0 100%, 100% 100%);
+      border-radius: 5px;
+      background-color: fff;
+      background-image: linear-gradient(
+        to left bottom,
+        #f2f5f8,
+        #e4eaec,
+        #d8dfde,
+        #cdd3cf,
+        #c5c7c1
+      );
+      width: 100%;
+      height: 50%;
+      transform-style: preserve-3d;
+      transform: perspective(1000px) rotateX(-150deg) translateY(-110%);
+      transition: transform 0.3s ease;
+      
+    }
+
+    .tooltip-container .text {
+      color: rgb(32, 30, 30);
+      font-weight: bold;
+      font-size: 40px;
+    }
+
+    .tooltip {
+      position: absolute;
+      top: -20px;
+      opacity: 0;
+      background: linear-gradient(-90deg, rgba(0, 0, 0, 0.05) 1px, white 1px),
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, white 1px),
+        linear-gradient(-90deg, rgba(0, 0, 0, 0.04) 1px, white 1px),
+        linear-gradient(rgba(0, 0, 0, 0.04) 1px, white 1px),
+        linear-gradient(white 3px, #f2f2f2 3px, #f2f2f2 78px, white 78px),
+        linear-gradient(-90deg, #aaa 1px, white 1px),
+        linear-gradient(-90deg, white 3px, #f2f2f2 3px, #f2f2f2 78px, white 78px),
+        linear-gradient(#aaa 1px, white 1px), #f2f2f2;
+      background-size: 4px 4px, 4px 4px, 80px 80px, 80px 80px, 80px 80px, 80px 80px,
+        80px 80px, 80px 80px;
+      padding: 5px 10px;
+      border: 1px solid rgb(206, 204, 204);
+
+      height: 70px;
+      width: 110px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition-duration: 0.2s;
+      pointer-events: none;
+      letter-spacing: 0.5px;
+      font-size: 18px;
+      font-weight: 600;
+      text-shadow: 10px salmon;
+      transform: scale(1.20);
+    }
+
+    .tooltip-container:hover {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    .tooltip-container:hover::before {
+      transform: rotateY(0);
+      background-image: none;
+      background-color: white;
+    }
+
+    .tooltip-container:hover .tooltip {
+      top: -90px;
+      opacity: 1;
+      transition-duration: 0.3s;
+    }
+  </style>
+
+
+
+  
+  
+</style>
+    <style>
+
+      body{
+        color: #000000;
+      }
+      .tooltip {
+    font-size: 60%; /* veya başka bir yüzde değeri */
+}
+    </style>
+
+
+  <!-- Paste your HTML code here -->
+  <div class="tooltip-container">
+    <span class="tooltip">fbmatches@gmail.com</span>
+    <span class="text">@</span>
+    
+  </div>
+
+
+
+<div id="logo" onclick="goToGalatasarayPage()">
+  <img src="fener1.png" alt="Fenerbahçe Logo">
+</div>
+
+<script>
+  function goToGalatasarayPage() {
+    window.location.href = 'homepage.html';
+  }
+</script>
+</body>
+</html>

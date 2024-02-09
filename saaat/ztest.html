@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Son 16 Maçları</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .teams-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-right: 20px;
+        }
+
+        .team {
+            width: 120px;
+            height: 60px;
+            border: 2px solid #ccc;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .team-line {
+            position: absolute;
+            height: 2px;
+            width: calc(100% + 20px);
+            background-color: #ccc;
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .cup-image {
+            width: 10%;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="teams-container">
+        <div class="team">A</div>
+        <div class="team-line"></div>
+        <div class="team">B</div>
+        <div class="team-line"></div>
+        <div class="team">C</div>
+        <div class="team-line"></div>
+        <div class="team">D</div>
+    </div>
+
+    <img src="link_to_your_image.jpg" alt="Kupa Resmi" class="cup-image">
+
+    <div class="teams-container">
+        <!-- Boş bırakıldı, diğer dikdörtgenleri ekleyebilirsiniz -->
+    </div>
+
+</body>
+</html>

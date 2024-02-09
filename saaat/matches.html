@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matches</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Ekran arka plan rengi */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+            color: white; /* Yazı rengi */
+        }
+
+        .takim {
+            margin-bottom: 10px;
+            color: white; /* Yazı rengi */
+            text-decoration: none; /* Bağlantı çizgisini kaldırma */
+            font-size: 20px;
+        }
+
+        .takim:hover {
+            font-weight: bold; /* Fare üzerine geldiğinde kalınlaştırma */
+        }
+
+        .takim {
+    transition: font-size 0.3s ease;
+}
+
+.takim:hover {
+    font-size: 42px;
+}
+
+
+        #logoButton {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+            transform: scale(1.5);
+        }
+
+        #logoButton img {
+            width: 50px;
+            height: auto;
+        }
+       
+    
+
+
+    </style>
+</head>
+<body>
+
+    
+
+    <button id="logoButton" onclick="goToHomepage()">
+        <img src="fener1.png" alt="Fener Logo">
+    </button>
+
+<a href="konyaspor.html" class="takim">Konyaspor</a>
+<a href="gaziantepfk.html" class="takim">Gaziantep FK</a>
+<a href="samsunspor.html" class="takim">Samsunspor</a>
+<a href="başakşehir.html" class="takim">Başakşehir</a>
+<a href="mkeankaragücü.html" class="takim">MKE Ankaragücü</a>
+<a href="antalyaspor.html" class="takim">Antalyaspor</a>
+<a href="alanyaspor.html" class="takim">Alanyaspor</a>
+<a href="ç.rizespor.html" class="takim">Ç.Rizespor</a>
+<a href="kasımpaşa.html" class="takim">Kasımpaşa</a>                        
+<a href="hatayspor.html" class="takim">Hatayspor</a>
+<a href="pendikspor.html" class="takim">Pendikspor</a>
+<a href="trabzonspor.html" class="takim">Trabzonspor</a> 
+<a href="adanademirspor.html" class="takim">Adana Demirspor</a>           
+<a href="fatihkaragümrük.html" class="takim">Fatih Karagümrük</a> 
+<a href="sivasspor.html" class="takim">Sivasspor</a>
+<a href="beşiktaş.html" class="takim">Beşiktaş</a>
+<a href="konyaspor1.html" class="takim">Konyaspor</a>
+<a href="kayserispor.html" class="takim">Kayserispor</a>
+<a href="galatasaray.html" class="takim">Galatasaray</a>
+<a href="istanbulspor.html" class="takim">İstanbulspor</a></li>
+
+
+    <script>
+        function goToHomepage() {
+            // Butona tıklandığında homepage.html sayfasına yönlendirme
+            window.location.href = "homepage.html";
+        }
+    </script>
+
+</body>
+</html>
